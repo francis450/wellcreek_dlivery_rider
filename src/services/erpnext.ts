@@ -58,7 +58,7 @@ class ERPNextService {
   async getSalesOrders() {
     try {
       const response = await this.makeRequest(
-        '/api/resource/Sales Order?fields=["name","customer","customer_name","delivery_date","grand_total","status"]&filters=[["status","in",["To Deliver and Bill","To Deliver"]]]&limit_page_length=50&order_by=creation desc'
+        '/api/resource/Sales Order?fields=["name","customer","customer_name","delivery_date","grand_total","status"]&filters=[["status","in",["To Deliver and Bill","To Deliver"]]]&limit_page_length=10&order_by=creation desc'
       );
       return response.data || [];
     } catch (error) {
