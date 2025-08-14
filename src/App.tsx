@@ -124,7 +124,7 @@ function App() {
           onPageChange={handlePageChange}
           onClose={handleSidebarClose}
         />
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen">
           <Header 
             onRefresh={fetchOrders} 
             isRefreshing={loading} 
@@ -160,7 +160,7 @@ function App() {
         onClose={handleSidebarClose}
         />
       
-      <div className="min-h-screen bg-gray-50">
+      <div className="bg-gray-50 fixed top-0 right-0 left-0">
         <Header 
           onRefresh={fetchOrders} 
           isRefreshing={loading} 
@@ -179,7 +179,7 @@ function App() {
         </div>
       )}
 
-      <div className="p-4">
+      <div className="p-4" style={{ marginTop: '160px' }}>
         {/* Stats */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4 mb-6">
           <div className="flex items-center justify-between">
